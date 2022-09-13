@@ -32,7 +32,7 @@
 </head>
 <body>
 	<%
-		if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+            if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 	%>
 	<jsp:include page="includes/sidebar.jsp"></jsp:include>
 

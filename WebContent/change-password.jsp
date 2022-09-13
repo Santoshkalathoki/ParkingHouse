@@ -45,7 +45,7 @@
 </head>
 <body>
 	<%
-		if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+		if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 	%>
 	<jsp:include page="includes/sidebar.jsp"></jsp:include>
 
@@ -101,7 +101,7 @@
 									String password = null;
 										Connection con = DatabaseConnection.getConnection();
 										Statement statement = con.createStatement();
-										ResultSet resultset = statement.executeQuery("select password from tbladmin where username='" + session.getAttribute("uname") + "'");
+										ResultSet resultset = statement.executeQuery("select password from tbladmin where email='" + session.getAttribute("email") + "'");
 										while (resultset.next()) {
 											password = resultset.getString(1);
 										}

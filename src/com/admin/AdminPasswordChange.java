@@ -26,13 +26,13 @@ public class AdminPasswordChange extends HttpServlet {
 		try {
 			Connection con = DatabaseConnection.getConnection();
 			Statement statement = con.createStatement();
-			ResultSet resultset = statement.executeQuery("select password from tbladmin where password='" + cpassword+ "' and username='" + session.getAttribute("uname") + "'");
+			ResultSet resultset = statement.executeQuery("select password from tbladmin where password='" + cpassword+ "' and email='" + session.getAttribute("email") + "'");
 			if (resultset.next()) {
 				pass = resultset.getString(1);
 			}
 			if (password.equals(confpass)) {
 				if (pass.equals(cpassword)) {
-					int i = statement.executeUpdate("update tbladmin set password='" + password + "' where username='"+ session.getAttribute("uname") + "' ");
+					int i = statement.executeUpdate("update tbladmin set password='" + password + "' where email='"+ session.getAttribute("email") + "' ");
 					response.sendRedirect("change-password.jsp");
 					statement.close();
 					con.close();

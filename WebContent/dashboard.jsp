@@ -96,7 +96,7 @@
 
 <body>
 	<%
-		if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+		if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 	%>
 	<jsp:include page="includes/sidebar.jsp"></jsp:include>
 
@@ -124,7 +124,7 @@
 						<div class="card-body ">
 							<div class="stat-widget-five">
 								<div class="stat-icon dib flat-color-1">
-									<i class="pe-7s-car"></i>
+									<i class="pe-7s-bicycle"></i>
 								</div>
 								<div class="stat-content">
 									<div class="text-left dib">
@@ -152,7 +152,7 @@
 						<div class="card-body">
 							<div class="stat-widget-five">
 								<div class="stat-icon dib flat-color-2">
-									<i class="pe-7s-car"></i>
+									<i class="pe-7s-bicycle"></i>
 								</div>
 								<div class="stat-content">
 									<div class="text-left dib">
@@ -182,7 +182,7 @@
 						<div class="card-body">
 							<div class="stat-widget-five">
 								<div class="stat-icon dib flat-color-3">
-									<i class="pe-7s-car"></i>
+									<i class="pe-7s-bicycle"></i>
 								</div>
 								<div class="stat-content">
 									<div class="text-left dib">
@@ -212,7 +212,7 @@
 						<div class="card-body">
 							<div class="stat-widget-five">
 								<div class="stat-icon dib flat-color-4">
-									<i class="pe-7s-car"></i>
+									<i class="pe-7s-bicycle"></i>
 								</div>
 								<div class="stat-content">
 									<div class="text-left dib">
@@ -220,7 +220,7 @@
 											<span class="count"> <%=count_total_vehentries%>
 											</span>
 										</div>
-										<div class="stat-heading">Total Vehiclesss Entries</div>
+										<div class="stat-heading">Total Vehicles Entries</div>
 									</div>
 								</div>
 							</div>
@@ -243,7 +243,7 @@
 						<div class="card-body">
 							<div class="stat-widget-five">
 								<div class="stat-icon dib flat-color-4">
-									<i class="pe-7s-car"></i>
+									<i class="pe-7s-bicycle"></i>
 								</div>
 								<div class="stat-content">
 									<div class="text-left dib">
@@ -271,7 +271,7 @@
 						<div class="card-body">
 							<div class="stat-widget-five">
 								<div class="stat-icon dib flat-color-4">
-									<i class="pe-7s-car"></i>
+									<i class="pe-7s-bicycle"></i>
 								</div>
 								<div class="stat-content">
 									<div class="text-left dib">

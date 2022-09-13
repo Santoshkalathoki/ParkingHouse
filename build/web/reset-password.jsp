@@ -31,13 +31,13 @@
 	href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800'
 	rel='stylesheet' type='text/css'>
 </head>
-<body style="background-image: url(images/VehicleParkingLogo.gif); background-size: 1150px;">
+<body style="background-image: url(images/V.jpg); background-size: 1150px;background-repeat: no-repeat; background-size: cover;">
 
 	<div class="sufee-login d-flex align-content-center flex-wrap">
 		<div class="container">
 			<div class="login-content">
 				<div class="login-logo">
-					<a href="index.php">
+					<a href="dashboard.jsp">
 						<h4 style="color: #FFFFFF">Vehicle Parking Management System</h4>
 					</a>
 				</div>

@@ -288,9 +288,9 @@
                             <br>
                             <br>
                             <div class="form-group">
-                                <label>User Name</label> 
-                                <input class="form-control" type="text"
-                                       placeholder="Username" required="true" name="username">
+                                <label>Email</label> 
+                                <input class="form-control" type="email"
+                                       placeholder="Email" required="true" name="email">
                             </div>
                             
                             <div class="form-group">

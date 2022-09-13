@@ -101,7 +101,7 @@
                                 <form action="AdminUpdateDetails" method="post">
                                     <p style="font-size: 16px; color: red" align="center">
                                         <%
-                                            if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+                                            if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
                                         %>
                                     </p>
                                     <%
@@ -109,7 +109,7 @@
                                         Connection con = DatabaseConnection.getConnection();
                                         Statement st = con.createStatement();
                                         ResultSet rs = st
-                                                .executeQuery("select * from tbladmin where username='" + session.getAttribute("uname") + "'");
+                                                .executeQuery("select * from tbladmin where email='" + session.getAttribute("email") + "'");
                                         while (rs.next()) {
                                     %>
 

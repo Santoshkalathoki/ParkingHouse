@@ -24,15 +24,14 @@ public class UserRegister extends HttpServlet {
 		String mobile = request.getParameter("mobile");
 		String email = request.getParameter("email");
 		String address = request.getParameter("address");
-		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		HttpSession hs = request.getSession();
 		try {
 			Connection connection = DatabaseConnection.getConnection();
 			Statement statement = connection.createStatement();
-			int addVehicle = statement.executeUpdate("insert into tbluser(fullname,mobile,email,address,uname,password)values('"
-							+ fullname + "','" + mobile + "','" + email + "','" + address + "','" + username
-							+ "','" + password + "')");
+			int addVehicle = statement.executeUpdate("insert into tbluser(fullname,mobile,email,address,password)values('"
+							+ fullname + "','" + mobile + "','" + email + "','" + address + "','"
+							 + password + "')");
 			if (addVehicle > 0) {
 				String message = "User register successfully, Please login.";
 				hs.setAttribute("message", message);

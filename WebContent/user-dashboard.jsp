@@ -93,7 +93,7 @@
 
     <body>
         <%
-            if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+            if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
         %>
         <jsp:include page="includes/user-sidebar.jsp"></jsp:include>
 
@@ -120,7 +120,7 @@
                             <div class="card-body">
                                 <div class="stat-widget-five">
                                     <div class="stat-icon dib flat-color-2">
-                                        <i class="pe-7s-car"></i>
+                                        <i class="pe-7s-bicycle"></i>
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
@@ -150,7 +150,8 @@
                             <div class="card-body">
                                 <div class="stat-widget-five">
                                     <div class="stat-icon dib flat-color-2">
-                                        <i class="pe-7s-car"></i>
+                                        <i class="pe-7s-bicycle"></i>
+                                        <p>Total Parking Slots </p>
                                     </div>
                                     <div class="stat-content">
                                         <div class="text-left dib">
@@ -158,7 +159,7 @@
                                                 <span class="count"> <%=slot_capacity%>
                                                 </span>
                                             </div>
-                                            <div class="stat-heading">Total Parking Slot Capacity</div>
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -166,6 +167,32 @@
                         </div>
                     </div>
 
+                                                
+                                                <div class="col-lg-3 col-md-6">
+                      
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="stat-widget-five">
+                                    <div class="stat-icon dib flat-color-2">
+                                        <i class="pe-7s-bicycle"></i>
+                                         <p>Parking Seats Available</p>
+                                    </div>
+                                    <div class="stat-content">
+                                        <div class="text-left dib">
+                                            <div class="stat-text">
+                                                <span class="count"> <%=slot_capacity-count%>
+                                                </span>
+                                            </div>
+                                               
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                
+                                                
 
 
                     <!-- /Widgets -->
@@ -174,10 +201,7 @@
             </div>
         </div>
 
-        <div class="clearfix">
-            <!-- Footer -->
-            <jsp:include page="includes/footer.jsp"></jsp:include>
-            </div>
+       
 
 
 
@@ -231,4 +255,5 @@
 
 
     </body>
+    <jsp:include page="includes/footer.jsp"></jsp:include>
 </html>

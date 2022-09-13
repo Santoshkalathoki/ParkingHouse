@@ -3,7 +3,7 @@
 <footer class="site-footer">
 	<div class="footer-inner bg-lightblue">
             <div class="row" style="align-items: center; padding-top: 15px;">
-			<div class="col-sm-6">Copyright &copy; 2020</div>
+			<div class="col-sm-6">Copyright &copy; All right reserves to Santosh Kalathoki</div>
 			<div class="col-sm-6 text-right">Vehicle Parking Management
 				System</div>
 		</div>

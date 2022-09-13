@@ -98,7 +98,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-2">
                             <li class="nav-item">
-                                <a class="nav-link" href="user-login.jsp">User Login</a>
+                                <a class="nav-link" href="user-login.jsp">User</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="admin-login.jsp">Admin</a>

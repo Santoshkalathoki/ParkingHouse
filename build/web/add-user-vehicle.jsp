@@ -33,7 +33,7 @@
 </head>
 <body >
 	<%
-		if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+		if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 	%>
 	<jsp:include page="includes/user-sidebar.jsp"></jsp:include>
 
@@ -115,29 +115,31 @@
 										</select>
 									</div>
 								</div>
-								<div class="row form-group">
-									<div class="col col-md-3">
-										<label for="text-input" class=" form-control-label">Vehicle
-											Company</label>
-									</div>
-									<div class="col-12 col-md-9">
-										<input type="text" id="vehcomp" name="vehcomp"
-											class="form-control" placeholder="Vehicle Company"
-											required="true">
-									</div>
-								</div>
+								
 
 								<div class="row form-group">
 									<div class="col col-md-3">
-										<label for="text-input" class=" form-control-label">Registration
+										<label for="text-input" class=" form-control-label">Vehicle
 											Number</label>
 									</div>
 									<div class="col-12 col-md-9">
 										<input type="text" id="vehreno" name="vehreno"
-											class="form-control" placeholder="Registration Number"
+											class="form-control" placeholder="Vehicle Number"
 											required="true">
 									</div>
 								</div>
+                                                                                <div class="row form-group">
+									<div class="col col-md-3">
+										<label for="text-input" class=" form-control-label">Entry
+											Date</label>
+									</div>
+									<div class="col-12 col-md-9">
+										<input type="date" id="vehreno" name="entrydate"
+											class="form-control"
+											required="true">
+                                                                        </div>
+                                                                                </div>
+									
 								<div class="row form-group">
 									<div class="col col-md-3">
 										<label for="text-input" class=" form-control-label">Owner
@@ -162,8 +164,10 @@
 									</div>
 								</div>
 								<p style="text-align: center;">
-									<button type="submit" class="btn btn-primary btn-sm"
-										name="submit">Add</button>
+									<button type="submit" class="btn btn-primary btn-sm" 
+									>Book</button>
+                                                                
+                                                                    
 								</p>
 							</form>
 						</div>
@@ -202,5 +206,6 @@
 			response.sendRedirect("user-login.jsp");
 		}
 	%>
+       
 </body>
 </html>

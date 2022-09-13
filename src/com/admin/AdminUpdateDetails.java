@@ -29,7 +29,7 @@ public class AdminUpdateDetails extends HttpServlet {
 		try {
 			Connection connection = DatabaseConnection.getConnection();
 			Statement statement = connection.createStatement();
-			int updateinfo = statement.executeUpdate("update tbladmin set adminName='" + name + "',mobilenumber='" + mobile+ "',email='" + email + "' where username='" + session.getAttribute("uname") + "'");
+			int updateinfo = statement.executeUpdate("update tbladmin set adminName='" + name + "',mobilenumber='" + mobile+ "',email='" + email + "' where email='" + session.getAttribute("email") + "'");
 			if (updateinfo > 0) {
 				String message = "Profile updated sucessfully.";
 				session.setAttribute("message", message);

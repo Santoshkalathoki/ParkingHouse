@@ -40,7 +40,7 @@
 			<div class="login-content">
 				<div class="login-logo">
 					<a href="index.jsp">
-						<h4 style="color: #FFFFFF">Vehicle Parking Management System</h4>
+						<h4 style="color: #FFFFFF"> Parking House</h4>
 					</a>
 				</div>
 				<div class="login-form">

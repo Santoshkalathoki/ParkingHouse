@@ -10,8 +10,8 @@
         <title>Parking House - Manage Incoming Vehicle</title>
 
 
-<!--        <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
-        <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">-->
+        <!--        <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+                <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">-->
 
         <link rel="stylesheet"
               href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
@@ -35,7 +35,7 @@
     </head>
     <body>
         <%
-            if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+            if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
         %>
         <!-- Left Panel -->
 
@@ -85,8 +85,8 @@
                                             <tr>
                                                 <th>S.NO</th>
                                                 <th>Parking Number</th>
+                                                <th>Vehicle Number</th>
                                                 <th>Owner Name</th>
-                                                <th>Vehicle Reg Number</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -100,14 +100,13 @@
                                     <tr>
                                         <td><%=resultset.getInt(1)%></td>
                                         <td><%=resultset.getString(2)%></td>
-                                        <td><%=resultset.getString(6)%></td>
+                                        <td><%=resultset.getString(4)%></td>
                                         <td><%=resultset.getString(5)%></td>
                                         <td><a
                                                 href="view-user-incomingview-details.jsp?viewid=<%=resultset.getInt(1)%>&parkingNo=<%=resultset.getString(2)%>">View</a>
                                             | <a href="print.jsp?vid=<%=resultset.getInt(1)%>"
                                                  style="cursor: pointer" target="_blank">Print</a>|
-                                                 <a href="print.jsp?vid=<%=resultset.getInt(1)%>"
-                                                 style="cursor: pointer" target="_blank">Delete</a></td>
+                                            </td>
                                     </tr>
                                     <%
                                         }
@@ -125,12 +124,6 @@
             <!-- .animated -->
         </div>
         <!-- .content -->
-
-        <div class="clearfix"></div>
-
-        <jsp:include page="includes/footer.jsp"></jsp:include>
-
-        </div>
         <!-- /#right-panel -->
 
         <!-- Right Panel -->

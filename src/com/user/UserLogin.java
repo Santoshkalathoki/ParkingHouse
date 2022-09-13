@@ -22,17 +22,17 @@ import com.connection.DatabaseConnection;
 public class UserLogin extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("username");
+		String email = request.getParameter("email");
 		String pass = request.getParameter("password");
 		try {
 			HttpSession hs = request.getSession();
 			String tokens = UUID.randomUUID().toString();
 			Connection con = DatabaseConnection.getConnection();
 			Statement st = con.createStatement();
-			ResultSet resultset = st.executeQuery("select * from tbluser where uname='" + uname + "' AND password='" + pass + "'");
+			ResultSet resultset = st.executeQuery("select * from tbluser where email='" + email + "' AND password='" + pass + "'");
 			if (resultset.next()) {
 				String fullName=resultset.getString(2);
-				hs.setAttribute("uname", uname);
+				hs.setAttribute("email", email);
 				hs.setAttribute("fullName", fullName);
 				hs.setAttribute("mobileNo", resultset.getString(3));
 				response.sendRedirect("user-dashboard.jsp?_tokens='" + tokens + "'");

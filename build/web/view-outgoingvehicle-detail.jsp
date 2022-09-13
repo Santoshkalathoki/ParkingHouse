@@ -31,7 +31,7 @@
 </head>
 <body>
 	<%
-		if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+            if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 	%>
 	<!-- Left Panel -->
 
@@ -93,41 +93,38 @@
 									<th>Vehicle Category</th>
 									<td><%=resultset.getString(3)%></td>
 								</tr>
+								
 								<tr>
-									<th>Vehicle Company Name</th>
+									<th>Registration Number</th>
 									<td><%=resultset.getString(4)%></td>
 								</tr>
 								<tr>
-									<th>Registration Number</th>
+									<th>Owner Name</th>
 									<td><%=resultset.getString(5)%></td>
 								</tr>
 								<tr>
-									<th>Owner Name</th>
+									<th>Owner Contact Number</th>
 									<td><%=resultset.getString(6)%></td>
 								</tr>
 								<tr>
-									<th>Owner Contact Number</th>
+									<th>In Time</th>
 									<td><%=resultset.getString(7)%></td>
 								</tr>
 								<tr>
-									<th>In Time</th>
+									<th>Out Time</th>
 									<td><%=resultset.getString(8)%></td>
 								</tr>
 								<tr>
-									<th>Out Time</th>
-									<td><%=resultset.getString(9)%></td>
-								</tr>
-								<tr>
 									<th>Remark</th>
-									<td><%=resultset.getString(11)%></td>
+									<td><%=resultset.getString(10)%></td>
 								</tr>
 								<tr>
 									<th>Status</th>
-									<td><%=resultset.getString(12)%></td>
+									<td><%=resultset.getString(11)%></td>
 								</tr>
 								<tr>
 									<th>Parking Fee</th>
-									<td><%=resultset.getString(10)%></td>
+									<td><%=resultset.getString(9)%></td>
 								</tr>
 							</table>
 						</div>

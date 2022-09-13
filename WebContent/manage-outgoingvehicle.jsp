@@ -31,7 +31,7 @@
 </head>
 <body>
 	<%
-		if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+            if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 	%>
 	<!-- Left Panel -->
 
@@ -80,7 +80,7 @@
 										<th>S.NO</th>
 										<th>Parking Number</th>
 										<th>Owner Name</th>
-										<th>Vehicle Reg Number</th>
+										<th>Vehicle Number</th>
 										<th>Action</th>
 									</tr>
 									</tr>

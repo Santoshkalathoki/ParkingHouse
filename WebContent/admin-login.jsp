@@ -173,22 +173,38 @@
 					</a>
 				</div>
 				<div class="login-form">
+                                    <div class="checkbox">
+							<label class="pull-left"><a href="index.jsp">Home
+									Page</a></label> <label class="pull-right"> <a href="forgot-password.jsp">Forgot Password?</a>
+							</label>
+						</div>
+                                    <br>
+                                    <p>
+                            <%
+                                String message = (String) session.getAttribute("message");
+                                if (message != null) {
+                                    session.removeAttribute("message");
+                            %>
+
+                        <h6>
+                            <center>Invalid Username and Password, try again.</center>
+                        </h6>
+                        <%
+                            }
+                        %>
+                        </p>
 					<form action="AdminLogin" method="post">
 						<p style="font-size: 16px; color: red" align="center"></p>
 						<div class="form-group">
-							<label>User Name</label> <input class="form-control" type="text"
-								placeholder="Username" required="true" name="username">
+							<label>Email</label> <input class="form-control" type="email"
+								placeholder="Email" required="true" name="email">
 						</div>
 						<div class="form-group">
 							<label>Password</label> <input type="password"
 								class="form-control" name="password" placeholder="Password"
 								required="true">
 						</div>
-						<div class="checkbox">
-							<label class="pull-left"><a href="index.jsp">Home
-									Page</a></label> <label class="pull-right"> <a href="forgot-password.jsp">Forgot Password?</a>
-							</label>
-						</div>
+						
 						<button type="submit" name="login"
 							class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
 					</form>

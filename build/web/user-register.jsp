@@ -77,10 +77,7 @@
                                                         <input type="text" class="form-control" placeholder="Address"
 								required="true" name="address">
 						</div>
-						<div class="form-group">
-							<label>User Name</label> <input class="form-control" type="text"
-								placeholder="Username" required="true" name="username">
-						</div>
+						
 						<div class="form-group">
 							<label>Password</label> <input type="password"
 								class="form-control" name="password" placeholder="Password"

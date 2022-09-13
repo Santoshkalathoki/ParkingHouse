@@ -25,18 +25,20 @@ public class AdminLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String uname = request.getParameter("username");
+		String email = request.getParameter("email");
 		String pass = request.getParameter("password");
 		try {
 			HttpSession hs = request.getSession();
 			String tokens = UUID.randomUUID().toString();
 			Connection con = DatabaseConnection.getConnection();
 			Statement st = con.createStatement();
-			ResultSet resultset = st.executeQuery("select * from tbladmin where username='" + uname + "' AND password='" + pass + "'");
+			ResultSet resultset = st.executeQuery("select * from tbladmin where email='" + email + "' AND password='" + pass + "'");
 			if (resultset.next()) {
-				hs.setAttribute("uname", uname);
+				hs.setAttribute("email", email);
 				response.sendRedirect("dashboard.jsp?_tokens='" + tokens + "'");
 			} else {
+                                String message = "Invalid credential";
+				hs.setAttribute("message", message);
 				response.sendRedirect("admin-login.jsp");
 			}
 		} catch (Exception e) {

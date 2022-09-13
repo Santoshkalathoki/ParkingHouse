@@ -84,7 +84,7 @@
 							<form action="" method="post">
 								<p style="font-size: 16px; color: red" align="center">
 									<%
-										if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+										if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 									%>
 								</p>
 								<%
@@ -92,7 +92,7 @@
 										Connection con = DatabaseConnection.getConnection();
 										Statement st = con.createStatement();
 										ResultSet rs = st
-												.executeQuery("select * from tbluser where uname='" + session.getAttribute("uname") + "'");
+												.executeQuery("select * from tbluser where email='" + session.getAttribute("email") + "'");
 										while (rs.next()) {
 								%>
 								<div class="row form-group">
@@ -133,23 +133,16 @@
 											type="email" value="<%=rs.getString(5)%>" required="true">
 									</div>
 								</div>
-								<div class="row form-group">
-									<div class="col col-md-3">
-										<label for="disabled-input" class=" form-control-label">User Name</label>
-									</div>
-									<div class="col-12 col-md-9">
-										<input class="form-control " id="email" name="email"
-											type="email" value="<%=rs.getString(6)%>" required="true" readonly>
-									</div>
-								</div>
+								
 								<div class="row form-group">
 									<div class="col col-md-3">
 										<label for="disabled-input" class=" form-control-label">Password</label>
 									</div>
 									<div class="col-12 col-md-9">
 										<input class="form-control " id="email" name="email"
-											type="password" value="<%=rs.getString(7)%>" required="true">
+											type="password" value="<%=rs.getString(6)%>" required="true">
 									</div>
+                                                                        
 								</div>
 
 								<%

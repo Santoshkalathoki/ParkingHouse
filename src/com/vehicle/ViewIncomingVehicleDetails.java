@@ -45,31 +45,7 @@ public class ViewIncomingVehicleDetails extends HttpServlet {
 
 			System.out.println("Hours  " + differenceHours);
 
-			if ("Six Wheeler Vehicles".equals(category) && differenceHours < 8) {
-				parkingcharge = 40;
-
-			} else if ("Six Wheeler Vehicles".equals(category) && differenceHours > 8 && differenceHours < 16) {
-				parkingcharge = 60;
-
-			} else if ("Six Wheeler Vehicles".equals(category) && differenceHours > 16 && differenceHours < 24) {
-				parkingcharge = 100;
-
-			} else if ("Six Wheeler Vehicles".equals(category) && differenceHours > 24) {
-				parkingcharge = 150;
-
-			} else if ("Four Wheeler Vehicle".equals(category) && differenceHours < 8) {
-				parkingcharge = 30;
-
-			} else if ("Four Wheeler Vehicle".equals(category) && differenceHours > 8 && differenceHours < 16) {
-				parkingcharge = 50;
-
-			} else if ("Four Wheeler Vehicle".equals(category) && differenceHours > 16 && differenceHours < 24) {
-				parkingcharge = 80;
-
-			} else if ("Four Wheeler Vehicle".equals(category) && differenceHours > 24) {
-				parkingcharge = 120;
-
-			} else if ("Two Wheeler Vehicle".equals(category) && differenceHours < 8) {
+			 if ("Two Wheeler Vehicle".equals(category) && differenceHours < 8) {
 				parkingcharge = 15;
 
 			} else if ("Two Wheeler Vehicle".equals(category) && differenceHours > 8 && differenceHours < 16) {
@@ -81,16 +57,6 @@ public class ViewIncomingVehicleDetails extends HttpServlet {
 			} else if ("Two Wheeler Vehicle".equals(category) && differenceHours > 24) {
 				parkingcharge = 45;
 
-			} else if ("Bicycles".equals(category) && differenceHours < 8) {
-				parkingcharge = 2;
-
-			} else if ("Bicycles".equals(category) && differenceHours > 8 && differenceHours < 16) {
-				parkingcharge = 5;
-
-			} else if ("Bicycles".equals(category) && differenceHours > 16 && differenceHours < 24) {
-				parkingcharge = 10;
-			} else if ("Bicycles".equals(category) && differenceHours > 24) {
-				parkingcharge = 12;
 			} else {
 				System.out.println("Bye");
 			}

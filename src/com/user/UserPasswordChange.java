@@ -29,13 +29,13 @@ public class UserPasswordChange extends HttpServlet {
 		try {
 			Connection con = DatabaseConnection.getConnection();
 			Statement statement = con.createStatement();
-			ResultSet resultset = statement.executeQuery("select password from tbluser where password='" + cpassword+ "' and uname='" + session.getAttribute("uname") + "'");
+			ResultSet resultset = statement.executeQuery("select password from tbluser where password='" + cpassword+ "' and email='" + session.getAttribute("email") + "'");
 			if (resultset.next()) {
 				pass = resultset.getString(1);
 			}
 			if (password.equals(confpass)) {
 				if (pass.equals(cpassword)) {
-					int i = statement.executeUpdate("update tbluser set password='" + password + "' where uname='"+ session.getAttribute("uname") + "' ");
+					int i = statement.executeUpdate("update tbluser set password='" + password + "' where email='"+ session.getAttribute("email") + "' ");
 					response.sendRedirect("change-user-password.jsp");
 					statement.close();
 					con.close();

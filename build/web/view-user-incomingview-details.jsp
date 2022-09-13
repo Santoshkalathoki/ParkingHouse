@@ -35,7 +35,7 @@
 </head>
 <body>
 	<%
-		if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {
+            if (session.getAttribute("email") != null && session.getAttribute("email") != "") {
 	%>
 	<!-- Left Panel -->
 
@@ -101,34 +101,31 @@
 									<th>Vehicle Category</th>
 									<td><input type="text" name="category" value="<%=resultset.getString(3)%>" style="border:none"></td>
 								</tr>
+								
 								<tr>
-									<th>Vehicle Company Name</th>
+									<th>Vehicle Number</th>
 									<td><%=resultset.getString(4)%></td>
 								</tr>
 								<tr>
-									<th>Registration Number</th>
+									<th>Owner Name</th>
 									<td><%=resultset.getString(5)%></td>
 								</tr>
 								<tr>
-									<th>Owner Name</th>
+									<th>Owner Contact Number</th>
 									<td><%=resultset.getString(6)%></td>
 								</tr>
 								<tr>
-									<th>Owner Contact Number</th>
-									<td><%=resultset.getString(7)%></td>
-								</tr>
-								<tr>
 									<th>In Time</th>
-									<td><input type="text" name="intime" value="<%=resultset.getString(8)%>" style="border:none"></td>
+									<td><input type="text" name="intime" value="<%=resultset.getString(7)%>" style="border:none"></td>
 								</tr>
 								<tr>
 									<th>Out Time</th>
 									<%
-										if (resultset.getString(12).equals("")) {
+										if (resultset.getString(11).equals("")) {
 
 												} else {
 									%>
-									<td><%=resultset.getString(9)%></td>
+									<td><%=resultset.getString(8)%></td>
 									<%
 										}
 									%>
@@ -137,10 +134,10 @@
 									<th>Status</th>
 									<td>
 										<%
-											if (resultset.getString(12).equals("")) {
+											if (resultset.getString(11).equals("")) {
 										%>Vehicle In<%
 											}
-													if (resultset.getString(12).equals("Out")) {
+													if (resultset.getString(11).equals("Out")) {
 										%>Vehicle Out<%
 											}
 										%>
@@ -153,7 +150,7 @@
 					</div>
 					<table class="table mb-0">
 						<%
-							if (resultset.getString(12).equals("")) {
+							if (resultset.getString(11).equals("")) {
 						%>
 						
 							<tr>
@@ -184,12 +181,12 @@
 					<table border="1" class="table table-bordered mg-b-0">
 						<tr>
 							<th>Remark</th>
-							<td><%=resultset.getString(11)%></td>
+							<td><%=resultset.getString(10)%></td>
 						</tr>
 						<tr>
 						<tr>
 							<th>Parking Fee</th>
-							<td><%=resultset.getString(10)%></td>
+							<td><%=resultset.getString(9)%></td>
 						</tr>
 						<%
 							}

@@ -29,7 +29,6 @@ public class AddOwnVehicle extends HttpServlet {
 		HttpSession hs = request.getSession();
 		System.out.println("ParkingNumber        " + ParkingNumber);
 		String catename = request.getParameter("catename");
-		String vehcomp = request.getParameter("vehcomp");
 		String vehreno = request.getParameter("vehreno");
 		String ownername = request.getParameter("ownername");
 		String ownercontno = request.getParameter("ownercontno");
@@ -50,8 +49,8 @@ public class AddOwnVehicle extends HttpServlet {
 			}
 			if (parking_seat > count) {
 				addVehicle = statement.executeUpdate(
-						"insert into tblvehicle(ParkingNumber,VehicleCategory,VehicleCompanyname,RegistrationNumber,OwnerName,OwnerContactNumber,status)values('"
-								+ ParkingNumber + "','" + catename + "','" + vehcomp + "','" + vehreno + "','"
+						"insert into tblvehicle(ParkingNumber,VehicleCategory,RegistrationNumber,OwnerName,OwnerContactNumber,status)values('"
+								+ ParkingNumber + "','" + catename + "','" + vehreno + "','"
 								+ ownername + "','" + ownercontno + "','" + status + "')");
 			} else {
 				String message="Parking slot is full, Wait for sometimes";
